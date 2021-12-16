@@ -1,11 +1,49 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+# sudo docker build -t techtrends .
+
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+# sudo docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+# sudo docker logs 8dacc7811afb
+# sudo docker ps | grep -i techtrends - | awk '{print $1}' | head -1 | xargs sudo docker logs
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+ <!-- 
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:47:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:47:25] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:47:25] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:48:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:18] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:18] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app: 2021-12-16 07:51:21.655342, Article 2020 CNCF Annual Report retrieved!
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:21] "GET /1 HTTP/1.1" 200 -
+INFO:app: 2021-12-16 07:51:29.754620, Article with id 122 not found, 404 page is returned.
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:29] "GET /122 HTTP/1.1" 404 -
+INFO:app: 2021-12-16 07:51:35.473040, Article Kubernetes v1.20 Release Notes retrieved!
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:35] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:42] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:46] "GET /metrics HTTP/1.1" 200 -
+INFO:app: 2021-12-16 07:51:50.363938, The "About Us" page is retrieved.
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:50] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:51:56] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:52:01] "GET /create HTTP/1.1" 200 -
+INFO:app: 2021-12-16 07:52:54.206906, A new article TechTrends is created!
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:52:54] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:52:54] "GET / HTTP/1.1" 200 -
+INFO:app: 2021-12-16 07:52:57.911289, Article TechTrends retrieved!
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:52:57] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:56:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:56:21] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:56:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:56:55] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2021 07:56:55] "GET /favicon.ico HTTP/1.1" 404 - 
+-->
